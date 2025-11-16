@@ -1,11 +1,168 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="es">
+<head>
     <meta charset="UTF-8">
-    <title>¡Mi sitio en Firebase Hosting!</title>
-  </head>
-  <body>
-    <h1>¡Hola, este es mi sitio publicado automáticamente con GitHub Actions!</h1>
-    <p>Si ves esto, ¡todo funciona perfecto!</p>
-  </body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro de Afiliados SIMECO</title>
+    <meta name="description" content="Foro independiente de afiliados SIMECO: espacio de protección, novedades y comunicación entre afiliados.">
+    <meta name="google-site-verification" content="U83Qv7NnlRP8AdP2r_O_K3fCA3ycm6nZRJvyKc8x5K4" />
+    <style>
+        :root {
+            --color-primary: #007bff;
+            --color-text: #333;
+            --color-bg: #f8f9fa;
+        }
+        body {
+            font-family: Arial, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 40px 0 20px 0;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        h1 {
+            color: var(--color-primary);
+            margin-bottom: 5px;
+            font-size: 2.5em;
+        }
+        h2 {
+            font-size: 1.2em;
+            color: #6c757d;
+            font-weight: normal;
+        }
+        main {
+            display: block;
+        }
+        .content-section {
+            background-color: #fff;
+            padding: 30px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            color: #6c757d;
+            font-size: 0.8em;
+        }
+        .form-container {
+            max-width: 450px;
+            margin: 0 auto;
+            padding-top: 15px;
+        }
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        button[type="submit"] {
+            background-color: var(--color-primary);
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .checkbox-group input {
+            margin-right: 10px;
+        }
+        @media (max-width: 600px) {
+            .container, .content-section, .form-container {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Foro de Afiliados SIMECO</h1>
+            <h2>El espacio independiente para la protección de los afiliados al servicio de salud del Consejo Profesional.</h2>
+        </header>
+
+        <main>
+            <section class="content-section" aria-label="información del foro">
+                <p style="font-size: 1.2em; font-weight: bold;">
+                    SI SOS AFILIADO DE SIMECO, ¡sumate al Foro!
+                </p>
+                <p>
+                    Foro cambios SIMECO es una asociación simple creada en 2018 que reúne a afiliados de SIMECO...
+                </p>
+                <p style="font-weight: bold;">
+                    Somos independientes del Consejo y de Swiss Medical.
+                </p>
+                <p>
+                    <a href="https://www.facebook.com/simecoforo" target="_blank" rel="noopener noreferrer" style="color: var(--color-primary); text-decoration: none;">
+                        Foro Simeco Facebook <span aria-label="enlace externo">(abre en nueva pestaña)</span>
+                    </a>
+                </p>
+                
+                <hr style="margin: 25px 0; border-top: 1px dashed #ddd;">
+
+                <h3 style="text-align: center; margin-bottom: 20px;">Inscríbete para recibir novedades</h3>
+                
+                <div class="form-container" aria-label="formulario de inscripción">
+                    <form action="https://api.web3forms.com/submit" method="POST" autocomplete="on">
+                        <input type="hidden" name="access_key" value="a88699ca-0a00-47c9-9a7e-54196a313de7">
+                        <div class="form-group">
+                            <label for="nombre">Nombre y Apellido</label>
+                            <input type="text" id="nombre" name="Nombre" required placeholder="Ej: Juan Pérez" autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Tu Correo Electrónico</label>
+                            <input type="email" id="email" name="Email" required placeholder="email@ejemplo.com" autocomplete="email">
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="consentimiento" name="Consentimiento" value="SI" required checked>
+                            <label for="consentimiento" style="font-weight: normal; margin-bottom: 0;">
+                                Acepto recibir comunicaciones del Foro Simeco.
+                            </label>
+                        </div>
+                        <button type="submit" aria-label="Enviar inscripción">Enviar mis datos</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>© 2025 - Foro Simeco. Todos los derechos Reservados.</p>
+    </footer>
+</body>
 </html>
